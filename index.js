@@ -9,7 +9,12 @@ app.get('/', (req, res) => {
 });
 
 app.post('/create-user', (req, res) => {
-  res.send('Got a POST request');
+  const username = req.body.username;
+  // TODO: shove this user into the database
+  res.json({
+    message: 'You created a user',
+    username: username,
+  })
 });
 
 app.listen(port, () => {
