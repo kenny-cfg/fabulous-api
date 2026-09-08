@@ -9,6 +9,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/create-user', (req, res) => {
+  /*
+  const { username } = req.body;
+  */
   const username = req.body.username;
   // TODO: shove this user into the database
   res.json({
