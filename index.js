@@ -20,6 +20,14 @@ app.post('/create-user', (req, res) => {
   })
 });
 
+app.put('/update-user/:id', (req, res) => {
+  const userId = req.params.id;
+  res.json({
+    message: 'You updated a user',
+    userId: userId
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server really is now running on port ${port}`);
 });
